@@ -4,7 +4,7 @@ interface Props{
 }
 const Sidebar :FC<Props> = (props) =>{
 return(
-<div className="h-screen bg-gray-600 w-80">
+<div className="h-screen w-1/6 bg-gray-600 ">
 this is sidebar.
 </div>
 );

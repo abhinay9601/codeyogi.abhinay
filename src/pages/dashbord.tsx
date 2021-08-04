@@ -1,11 +1,14 @@
 import {FC ,memo} from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../components/dashboard.components/Navbar";
 
 interface Props{
 }
 const dashbord :FC<Props> = (props) =>{
 return(
-<div>
+<div className="flex-grow"> 
+  {/* <Avatar Size="medium" status="undefined"></Avatar> */}
+  <Navbar></Navbar>
 <p>This is dashboard page</p>
 <Link to="/recordingpage"><span className="text-blue-500 underline">Recoding page</span></Link>
 </div>

@@ -9,7 +9,7 @@ import LecturePage from "./lecture.page";
 interface Props{}
 const Appcontainer : FC<Props> =(props) => {
   return(
-    <div className="flex flex-row"> 
+    <div className="flex flex-row "> 
     <Sidebar></Sidebar>
  <Switch>
    <Route path="/dashboard" exact>
