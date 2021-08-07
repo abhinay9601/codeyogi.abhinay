@@ -12,14 +12,14 @@ const statusClass = {
   undefined: ""
 };
 const sizeClass  = {
-  large: " w-14 ",
-  medium: " w-12 ",
-  small: " w-10 "
+  large: " w-12 ",
+  medium: " w-10 ",
+  small: " w-8 "
 };
 const positionClass= {
-  small: " bottom-0 left-6 ",
-  medium:" bottom-0 left-8 ",
-  large: " bottom-0 left-10"
+  small: " w-2 h-2 bottom-0 left-6 ",
+  medium:" w-3 h-3 bottom-0 left-6 ",
+  large: " w-4 h-4 bottom-0 left-8"
 };
 
 const Avtar: FC<Props> = ({Size ,status}) => {
@@ -27,7 +27,7 @@ const Avtar: FC<Props> = ({Size ,status}) => {
     <div>
      <div className="relative">
         <img className={"h-auto rounded-full "  + sizeClass[Size!]} src={User} alt="User-logo"  />
-       <div className={"w-4 h-4 rounded-full absolute "  + statusClass[status!] + positionClass[Size!] }></div>
+       <div className={" rounded-full absolute "  + statusClass[status!] + positionClass[Size!] }></div>
       </div>
     </div>
   );
