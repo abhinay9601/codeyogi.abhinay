@@ -1,10 +1,10 @@
 import { FC, memo } from "react";
 import { Switch, Route } from "react-router-dom";
-import Sidebar from "./sidebar";
+import Sidebar from "../sidebar";
 import Dashbord from "./dashbord";
 import Recordings from "./recordingspage";
 import LecturePage from "./lecture.page";
-import Navbar from "../components/dashboard.components/Navbar";
+import Navbar from "../../components/dashboard.components/Navbar";
 import { AiOutlineMenu } from "react-icons/ai";
 import {AiOutlineDown} from "react-icons/ai";
 

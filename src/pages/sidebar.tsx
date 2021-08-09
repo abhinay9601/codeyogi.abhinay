@@ -1,5 +1,5 @@
 import { FC, memo } from "react";
-import { logout } from "../api";
+import { logout } from "../api/auth";
 import Button from "../components/button/button"
 interface Props {}
 const Sidebar: FC<Props> = (props) => {

@@ -1,15 +1,17 @@
-import { FC, memo, useEffect } from "react";
+import { FC, memo, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { fetchGroups } from "../api";
+import { fetchGroups } from "../../api/groups";
+import Progressbar from "../../components/progressbar/Progressbar"
 
 interface Props {}
 const Dashbord: FC<Props> = (props) => {
+  const [query ,setQuery] =useState("ill");
   useEffect(() => {
-    fetchGroups({status:'all-groups'});
-  },[]);
+    fetchGroups({status:'all-groups',query});
+  },[query]);
   return (
     <div className="flex-grow">
-      {/* <Avatar Size="medium" status="undefined"></Avatar> */}
+     <Progressbar className="w-1/2" ></Progressbar>
 
       <p>This is dashboard page</p>
       <Link to="/recordingpage">

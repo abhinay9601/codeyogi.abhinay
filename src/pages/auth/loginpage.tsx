@@ -6,9 +6,9 @@ import { ImSpinner } from "react-icons/im";
 import { BiUser } from "react-icons/bi";
 import * as yup from "yup";
 import {  useFormik} from "formik";
-import Inputs from "../components/input/input" 
-import Button from "../components/button/button"
-import { login } from "../api";
+import Inputs from "../../components/input/input" 
+import Button from "../../components/button/button"
+import { login } from "../../api/auth";
 interface Props {}
 const Login: FC<Props> = (props ) => {
   const history = useHistory();

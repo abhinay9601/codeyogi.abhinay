@@ -2,12 +2,12 @@ import { FC, memo } from "react";
 import { Switch, Route } from "react-router-dom";
 // import { BrowserRouter, Redirect, Route } from "react-router-dom";
 
-import AuthPage from "./authhero";
+import AuthPage from "../appContainer/authhero";
 import Login from "./loginpage";
 import Signup from "./signuppage";
 
 interface Props {}
-const combine1: FC<Props> = (props) => {
+const combine: FC<Props> = (props) => {
   return (
     <div className="flex fle-row justify-between">
       <Switch>
@@ -22,4 +22,4 @@ const combine1: FC<Props> = (props) => {
     </div>
   );
 };
-export default memo(combine1);
+export default memo(combine);
