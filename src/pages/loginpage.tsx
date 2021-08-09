@@ -1,5 +1,6 @@
 import React, { FC, memo } from "react";
 import { Link, useHistory } from "react-router-dom";
+// import {History} from "history";
 import { HiLockClosed } from "react-icons/hi";
 import { ImSpinner } from "react-icons/im";
 import { BiUser } from "react-icons/bi";
@@ -9,8 +10,8 @@ import Inputs from "../components/input/input"
 import Button from "../components/button/button"
 import { login } from "../api";
 interface Props {}
-const Login: FC<Props> = (props) => {
-  // const history = useHistory();
+const Login: FC<Props> = (props ) => {
+  const history = useHistory();
   const {
     handleSubmit,
     getFieldProps,
@@ -31,7 +32,9 @@ const Login: FC<Props> = (props) => {
         password: yup.string().required().min(8),
       }),
     onSubmit: (data) => {
-      login(data);
+     login(data).then(() =>{
+       history.push("/dashboard")
+      });
     },
   });
 

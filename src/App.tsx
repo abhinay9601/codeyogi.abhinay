@@ -5,16 +5,18 @@ import "./App.css";
 import Notfound from "./pages/notfoundpage"
 import AppContainer from "./pages/app.container.page";
 import Combine1 from "./pages/comb-login-signup";
+import { LS_LOGIN_TOKEN } from "./api";
 
 
 // import logo from './logo.svg';
 function App() {
+  const token = localStorage.getItem(LS_LOGIN_TOKEN) ;
   return (
     <div>
       <BrowserRouter>
         <Switch>
           <Route path="/" exact>
-            <Redirect to="/login"></Redirect>
+           {token ? <Redirect to="/dashboard" />: <Redirect to="/login" />}
           </Route>
           <Route path={["/login", "/signuppage"]} exact>
             <Combine1></Combine1>
